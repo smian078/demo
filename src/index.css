@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: "Plus Jakarta Sans", "Noto Sans Devanagari", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    color-scheme: light;
+  }
+
+  html.senior-text-lg {
+    font-size: 19.2px;
+  }
+
+  body {
+    margin: 0;
+    background-color: #EAECE6;
+    color: #111827;
+    font-family: "Plus Jakarta Sans", "Noto Sans Devanagari", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  a,
+  select,
+  input,
+  textarea {
+    font-family: inherit;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  select:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid #1A3C2B;
+    outline-offset: 2px;
+  }
+}
+
+@keyframes gentleRing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.12;
+  }
+}
+
+@keyframes voiceWave {
+  0%, 100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-gentle-ring {
+  animation: gentleRing 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-voice-bar {
+  transform-origin: center;
+  animation: voiceWave 1.1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-gentle-ring,
+  .animate-voice-bar {
+    animation: none;
+  }
+}
+
+/* Custom thin warm scrollbar inside mobile viewport */
+.app-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.app-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.app-scroll::-webkit-scrollbar-thumb {
+  background-color: #CBD4C9;
+  border-radius: 9999px;
+}

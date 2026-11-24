@@ -1,0 +1,6 @@
+{
+  "name": "Suraksha Sathi",
+  "description": "Digital Literacy, Live Scam Scanner, and Cyber Fraud Awareness mobile app designed for Indian senior citizens and their caregivers.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
